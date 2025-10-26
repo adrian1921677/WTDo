@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd ../.. && pnpm --filter=@wtdo/shared build && pnpm --filter=@wtdo/web build",
+  "installCommand": "cd ../.. && pnpm install",
+  "outputDirectory": ".next"
+}
+
