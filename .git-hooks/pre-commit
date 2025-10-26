@@ -1,0 +1,4 @@
+#!/bin/sh
+# Auto-update to GitHub after every change
+git push
+
