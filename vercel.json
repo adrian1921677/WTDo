@@ -1,0 +1,12 @@
+{
+  "buildCommand": "pnpm --filter=@wtdo/shared build && pnpm --filter=@wtdo/web build",
+  "installCommand": "pnpm install",
+  "framework": "nextjs",
+  "projectSettings": {
+    "buildCommand": "pnpm --filter=@wtdo/shared build && pnpm --filter=@wtdo/web build",
+    "devCommand": "pnpm dev --filter=@wtdo/web",
+    "outputDirectory": ".next",
+    "installCommand": "pnpm install"
+  },
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD ."
+}
