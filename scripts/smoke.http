@@ -1,0 +1,51 @@
+### WTDU API Smoke Tests
+# Run these in VS Code REST Client or similar
+
+@baseUrl = http://localhost:3000
+
+### 1. Parse natural language text
+POST {{baseUrl}}/api/parse
+Content-Type: application/json
+
+{
+  "text": "morgen 8 uhr zahnarzt",
+  "timezone": "Europe/Berlin"
+}
+
+### 2. Create reminder
+POST {{baseUrl}}/api/reminders
+Content-Type: application/json
+
+{
+  "title": "Demo Reminder",
+  "note": "This is a test reminder",
+  "dueAt": "2024-01-20T10:00:00.000Z",
+  "timezone": "Europe/Berlin"
+}
+
+### 3. Get all pending reminders
+GET {{baseUrl}}/api/reminders
+
+### 4. Register device token for push
+POST {{baseUrl}}/api/push/register
+Content-Type: application/json
+
+{
+  "platform": "ios",
+  "token": "ExponentPushToken[test-token]"
+}
+
+### 5. Manual send (replace REMINDER_ID)
+POST {{baseUrl}}/api/reminders/send
+Content-Type: application/json
+
+{
+  "id": "REMINDER_ID"
+}
+
+### 6. Snooze reminder (replace REMINDER_ID)
+POST {{baseUrl}}/api/reminders/REMINDER_ID/snooze
+
+### 7. Mark reminder as done (replace REMINDER_ID)
+POST {{baseUrl}}/api/reminders/REMINDER_ID/done
+
