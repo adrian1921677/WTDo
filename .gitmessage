@@ -1,0 +1,11 @@
+# WTDU Git Commit Messages
+
+## Auto-Update Format
+Update: [description] via git-update script
+
+## Manual Formats
+Feature: [description]
+Fix: [description]
+Refactor: [description]
+Docs: [description]
+
